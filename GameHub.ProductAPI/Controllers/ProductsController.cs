@@ -19,11 +19,11 @@ namespace GameHub.ProductAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductDTO>>> Get()
         {
-            var produtosDto = await _productService.GetProducts();
-            if (produtosDto == null)
+            var productDto = await _productService.GetProducts();
+            if (productDto == null)
                 return NotFound("Products not found");
 
-            return Ok(produtosDto);
+            return Ok(productDto);
         }
 
         [HttpGet("{id:int}", Name = "GetProduct")]

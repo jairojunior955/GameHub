@@ -4,16 +4,9 @@ namespace GameHub.ProductAPI.Context
 {
     public class ApplicationDbContext : DbContext
     {
-        protected readonly IConfiguration Configuration;
-        public ApplicationDbContext(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseNpgsql(Configuration.GetConnectionString("WebAPIDatabase"));
-        }
+        
         public DbSet<Category>? Categories { get; set; }
         public DbSet<Product>? Products { get; set; }
 
