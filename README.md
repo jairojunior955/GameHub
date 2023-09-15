@@ -7,6 +7,12 @@
 - [API Endpoints](#api-endpoints)
 - [Database](#database)
 
+## ERD 
+![diagrama ER](https://github.com/jairojunior955/GameHub/assets/79456331/69c0b6b9-3ecc-41c5-95fc-638401756a69)
+
+## UML Diagram
+![diagrama UML](https://github.com/jairojunior955/GameHub/assets/79456331/f8a75eeb-b0a7-4bc9-824b-d6f4661820cc)
+
 ## Installation
 
 1. Clone the repository:
