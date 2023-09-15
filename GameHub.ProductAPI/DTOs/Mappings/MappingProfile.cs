@@ -8,7 +8,8 @@ namespace GameHub.ProductAPI.DTOs.Mappings
         public MappingProfile()
         {
             CreateMap<Category, CategoryDTO>().ReverseMap();
-            CreateMap<Product, ProductDTO>().ReverseMap();
+            CreateMap<ProductDTO, Product>();
+            CreateMap<Product, ProductDTO>().ForMember(x => x.CategoryName, opt => opt.MapFrom(src => src.Category.Name));
 
         }
     }
