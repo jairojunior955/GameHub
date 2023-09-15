@@ -20,6 +20,7 @@
 dotnet run
 ```
 2. The Server will be listen on https://localhost:7208
+3. Swagger available on https://localhost:7208/swagger/index.html
 ## API Endpoints
 ```markdown
 GET /api/Categories - Retrieve a list of all categories.
